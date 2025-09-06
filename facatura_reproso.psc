@@ -1,25 +1,40 @@
-Algoritmo facatura_reproso
-	//facatura de reproso
+Algoritmo ejercicio1_estructura
+	//1. declarar Variables
+Definir nombredecliente, producto, tipocliente Como Caracter
+Definir cantidad Como Entero
+Definir preciounitario, subtotal, impuesto, total Como Real
+Definir estudiante Como Logico
+
+	//2. asignar valores 
+	nombredecliente <- "jhoan alejandro"
+	producto <- "LECHE"
+	cantidad <- 6
+	preciounitario <- 2800
+	estudiante <- Verdadero
+	tipocliente <- "B"
 	
-		Definir producto como cadena 
-		Definir precio, iva, total Como Real
+	//3. calcula 
+	subtotal <- cantidad * preciounitario
+	
+	si estudiante = Verdadero Entonces 
+		impuesto <- suntotalo * 0.5
+	SiNo
+		impuesto <- subtotal * 0.13
+	FinSi
+	 
+		total <- subtotal + impuesto
 		
-		Escribir "el nombre del producto: "
-	       Leer producto
-	    Escribir "el precio del producto : "
-		    leer precio 
-			
-			//calcular iva (19%)
-		iva <- subtotal * 0.19
-		 
-		//calcuñar precio del total
-		total <- precio + iva
-		 
-		//Mostrar resultados
-		   Escribir "_____factura_____" 
-		   Escribir " producto: " , producto
-		   Escribir " precio: $ ", precio
-		   Escribir " iva (19%): $ " , iva
-		   Escribir "total de factura: $ ", total
+		//4. Mostrar resultado de facturar
+		Escribir "-----------------------"
+		Escribir "   factura de compra" 
+		Escribir "-----------------------"
 		
+		Escribir "cliente: ", nombredecliente
+		Escribir "tipo de cliente: ", tipocliente
+		Escribir "producto: ", producto
+		Escribir "cantidad: ", cantidad
+		Escribir "precio unitario: $", preciounitario
+		Escribir "subtotal: $", subtotal
+		Escribir "impuesto: $", impuesto 
+		Escribir "total a pagar: ", total
 FinAlgoritmo
